@@ -13,6 +13,11 @@ class _SignUpState extends State<SignUp> {
     final _formKey = GlobalKey<FormState>();
     final _email = TextEditingController();
     final _password = TextEditingController();
-    return Form();
+    return Form(
+      key: _formKey,
+      child: Container(
+        child: const Text('I work!'),
+      ),
+    );
   }
 }
