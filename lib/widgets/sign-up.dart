@@ -10,8 +10,9 @@ class SignUp extends StatefulWidget {
 class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
-    String _email = '';
-    String _password = '';
-    return const Text('I work!');
+    final _formKey = GlobalKey<FormState>();
+    final _email = TextEditingController();
+    final _password = TextEditingController();
+    return Form();
   }
 }
