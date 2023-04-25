@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
-void main() {
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized;
   runApp(const MyApp());
 }
 
