@@ -17,10 +17,16 @@ class _SignUpState extends State<SignUp> {
     // This will be for sizing
     final _size = MediaQuery.of(context).size;
 
-    return Form(
-      key: _formKey,
-      child: Container(
-        child: const Text('I work!'),
+    return Container(
+      color: Theme.of(context).primaryColor,
+      alignment: Alignment.center,
+      padding: EdgeInsets.all(_size.width * 0.1),
+      margin: EdgeInsets.only(top: _size.height * 0.1),
+      child: Form(
+        key: _formKey,
+        child: Container(
+          child: const Text('I work!'),
+        ),
       ),
     );
   }
