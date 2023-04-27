@@ -27,7 +27,7 @@ class _SignUpState extends State<SignUp> {
     super.dispose();
   }
 
-  Future _printEmailValue() {
+  Future _printEmailValue() async {
     return showDialog(
         context: context,
         builder: (BuildContext ctx) {
@@ -36,10 +36,38 @@ class _SignUpState extends State<SignUp> {
             content: Text('Is this the email you entered? ${_email.text}'),
             actions: <Widget>[
               IconButton(
-                icon: const Icon(Icons.check),
+                color: Colors.green,
+                icon: const Icon(
+                  Icons.check,
+                  color: Colors.white,
+                ),
                 onPressed: () {
                   Navigator.of(ctx).pop();
                 },
+              ),
+            ],
+          );
+        });
+  }
+
+  Future _printPasswordValue() async {
+    return showDialog(
+        context: context,
+        builder: (BuildContext ctx) {
+          return AlertDialog(
+            title: const Text('Test Dialog'),
+            content:
+                Text('Is this the password you entered? ${_password.text}'),
+            actions: <Widget>[
+              IconButton(
+                onPressed: () {
+                  Navigator.of(ctx).pop();
+                },
+                icon: const Icon(
+                  Icons.check,
+                  color: Colors.white,
+                ),
+                color: Colors.green,
               ),
             ],
           );
