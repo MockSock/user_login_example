@@ -13,6 +13,13 @@ class _SignUpState extends State<SignUp> {
   final _password = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+    _email.addListener(_printEmailValue);
+    _password.addListener(_printPasswordValue);
+  }
+
+  @override
   Widget build(BuildContext context) {
     // This will be for sizing
     final _size = MediaQuery.of(context).size;
