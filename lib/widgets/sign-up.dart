@@ -27,6 +27,25 @@ class _SignUpState extends State<SignUp> {
     super.dispose();
   }
 
+  Future _printEmailValue() {
+    return showDialog(
+        context: context,
+        builder: (BuildContext ctx) {
+          return AlertDialog(
+            title: const Text("Test Dialog"),
+            content: Text('Is this the email you entered? ${_email.text}'),
+            actions: <Widget>[
+              IconButton(
+                icon: const Icon(Icons.check),
+                onPressed: () {
+                  Navigator.of(ctx).pop();
+                },
+              ),
+            ],
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     // This will be for sizing
