@@ -36,14 +36,14 @@ class _SignUpState extends State<SignUp> {
             content: Text('Is this the email you entered? ${_email.text}'),
             actions: <Widget>[
               IconButton(
+                onPressed: () {
+                  Navigator.of(ctx).pop();
+                },
                 color: Colors.green,
                 icon: const Icon(
                   Icons.check,
                   color: Colors.white,
                 ),
-                onPressed: () {
-                  Navigator.of(ctx).pop();
-                },
               ),
             ],
           );
