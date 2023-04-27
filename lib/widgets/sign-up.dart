@@ -20,6 +20,14 @@ class _SignUpState extends State<SignUp> {
   }
 
   @override
+  // This helps prevent memory leaks
+  void dispose() {
+    _email.dispose();
+    _password.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     // This will be for sizing
     final _size = MediaQuery.of(context).size;
