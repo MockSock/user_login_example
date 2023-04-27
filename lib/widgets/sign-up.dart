@@ -8,12 +8,12 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  final _formKey = GlobalKey<FormState>();
+  final _email = TextEditingController();
+  final _password = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    final _formKey = GlobalKey<FormState>();
-    final _email = TextEditingController();
-    final _password = TextEditingController();
-
     // This will be for sizing
     final _size = MediaQuery.of(context).size;
 
