@@ -87,7 +87,13 @@ class _SignUpState extends State<SignUp> {
       child: Form(
         key: _formKey,
         child: Column(
-          children: <Widget>[],
+          children: <Widget>[
+            TextField(
+              decoration:
+                  const InputDecoration(labelText: 'Please Enter your Email'),
+              controller: _email,
+            ),
+          ],
         ),
       ),
     );
