@@ -77,17 +77,17 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     // This will be for sizing
-    final _size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size;
 
     return Container(
       color: Theme.of(context).primaryColor,
       alignment: Alignment.center,
-      padding: EdgeInsets.all(_size.width * 0.1),
-      margin: EdgeInsets.only(top: _size.height * 0.1),
+      padding: EdgeInsets.all(size.width * 0.1),
+      margin: EdgeInsets.only(top: size.height * 0.1),
       child: Form(
         key: _formKey,
-        child: Container(
-          child: const Text('I work!'),
+        child: Column(
+          children: <Widget>[],
         ),
       ),
     );
